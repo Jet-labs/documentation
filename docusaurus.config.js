@@ -5,7 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-
+const organizationName = "Jet-labs";
+const projectName = "documentation";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jet Admin docs',
@@ -13,18 +14,21 @@ const config = {
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  // url: 'https://your-docusaurus-site.example.com',
+  url: `https://${organizationName}.github.io`,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  // baseUrl: '/docs/',
+  baseUrl: `/${projectName}/`,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Jet Labs', // Usually your GitHub org/user name.
-  projectName: 'Jet Admin', // Usually your repo name.
+  organizationName, // Usually your GitHub org/user name.
+  projectName, // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  trailingSlash: false,
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -43,21 +47,39 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         },
         theme: {
           customCss: './src/css/custom.css',
         },
       }),
     ],
+    // [
+    //   "classic",
+    //   /** @type {import('@docusaurus/preset-classic').Options} */
+    //   ({
+    //     // (...)
+    //     docs: {
+    //       // (...)
+    //       sidebarPath: './sidebars.js',
+    //       editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+    //     },
+    //     blog: {
+    //       showReadingTime: true,
+    //       // (...)
+    //       editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+    //     },
+    //     theme: {
+    //             customCss: './src/css/custom.css',
+    //           },
+    //   }),
+    // ],
   ],
 
   themeConfig:
