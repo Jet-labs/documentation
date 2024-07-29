@@ -1,0 +1,34 @@
+---
+sidebar_position: 6
+---
+# Scheduled Jobs
+-------------------------
+These are background jobs scheduled with cron expressions to execute predefined Query objects.
+
+![jobs](/img/jobs.png)
+
+## Cron Syntax Quick Reference 
+
+| Schedule | Cron Expression | Description |
+|---|---|---|
+| Daily at Midnight | `0 0 * * *` | Runs the command every day at midnight (12:00 AM). |
+| Every Hour | `0 * * * *` | Runs the command at the beginning of every hour. |
+| Monday at 3 PM | `0 15 * * 1` | Runs the command every Monday at 3:00 PM. |
+| Every 15 Minutes | `*/15 * * * *` | Runs the command every 15 minutes.  |
+| First Day of Every Month at 5 AM | `0 5 1 * *` | Runs the command on the 1st of every month at 5:00 AM. |
+| Every Weekday at 9 AM | `0 9 * * 1-5` | Runs the command every weekday (Monday to Friday) at 9:00 AM. |
+| Every 5 Minutes from 9 AM to 5 PM | `*/5 9-17 * * *` | Runs the command every 5 minutes between 9:00 AM and 5:00 PM. |
+| On the 15th of Each Month at Noon | `0 12 15 * *` | Runs the command on the 15th of every month at noon (12:00 PM). |
+
+## Fields
+- **Minute**: `0-59`
+- **Hour**: `0-23`
+- **Day**: `1-31`
+- **Month**: `1-12`
+- **Day of Week**: `0-7` (0 & 7 are Sunday)
+
+## Special Characters
+- **`*`**: Every
+- **`,`**: Multiple
+- **`-`**: Range
+- **`/`**: Increment
