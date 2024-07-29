@@ -5,7 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-const organizationName = "Jet-labs";
+const organizationName = "jet-labs";
 const projectName = "documentation";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
