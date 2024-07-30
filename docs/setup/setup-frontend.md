@@ -3,8 +3,8 @@ sidebar_position: 3
 ---
 
 # Frontend setup
------------------
-This is the frontend component of the project build in React JS. It includes various dependencies and scripts for building and running the frontend application for Jet Admin.
+
+This is the frontend component of the project build in React JS.
 
 ## Installation
 

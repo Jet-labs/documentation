@@ -3,8 +3,8 @@ sidebar_position: 2
 ---
 
 # Backend setup
------------------
-This is the backend component of the project. It includes various scripts and dependencies for building and running the backend server.
+
+This is the backend component of the project.
 
 ## Install Dependencies
    * Navigate to your project's root directory in your terminal.
