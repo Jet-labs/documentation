@@ -23,6 +23,12 @@ This is the backend component of the project.
        JWT_REFRESH_TOKEN_SECRET="your_secret_key"
        ```
    * Add the `DATABASE_URL` value to the `package.json` file under the `env` object.
+   * Add required modules in the `setup-config.js` file 
+      ```js
+      {
+      "modules": ["query", "graph", "dashboard", "app_constant", "job"]
+      }
+      ```
 
 ## Pull Database Schema
    * Run the appropriate command based on your operating system:
@@ -40,11 +46,13 @@ This is the backend component of the project.
    * Create necessary tables and records:
      * **Windows:**
        ```bash
-       npm run db-setup-w
+       npm run auth-setup-w
+       npm run module-setup-w
        ```
      * **Linux:**
        ```bash
-       npm run db-setup
+       npm run auth-setup
+       npm run module-setup
        ```
 
 ## Generate Prisma Client

@@ -3,15 +3,16 @@
 // (when paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
-
-import {themes as prismThemes} from 'prism-react-renderer';
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
+import { themes as prismThemes } from "prism-react-renderer";
 const organizationName = "jet-labs";
 const projectName = "documentation";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Jet Admin docs',
-  tagline: 'Welcome to Jet Admin, a web-based PostgreSQL tables manager and admin dashboard for your operations! Edit data, build graphs, and create dashboards using queries.',
-  favicon: 'img/logo.png',
+  title: "Jet Admin docs",
+  tagline:
+    "Welcome to Jet Admin, a web-based PostgreSQL tables manager and admin dashboard for your operations! Edit data, build graphs, and create dashboards using queries.",
+  favicon: "img/logo.png",
 
   // Set the production url of your site here
   // url: 'https://your-docusaurus-site.example.com',
@@ -26,25 +27,25 @@ const config = {
   organizationName, // Usually your GitHub org/user name.
   projectName, // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
-
+  plugins: [tailwindPlugin],
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
@@ -56,7 +57,7 @@ const config = {
         //   editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         // },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -86,37 +87,37 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: 'Jet Admin',
+        title: "Jet Admin",
         logo: {
-          alt: 'Jet Admin Logo',
-          src: 'img/logo.png',
+          alt: "Jet Admin Logo",
+          src: "img/logo.png",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
+            type: "docSidebar",
+            sidebarId: "tutorialSidebar",
+            position: "left",
+            label: "Tutorial",
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/Jet-labs/Jet-admin',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/Jet-labs/Jet-admin",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: "Tutorial",
+                to: "/docs/intro",
               },
             ],
           },
@@ -138,15 +139,15 @@ const config = {
           //   ],
           // },
           {
-            title: 'More',
+            title: "More",
             items: [
               // {
               //   label: 'Blog',
               //   to: '/blog',
               // },
               {
-                label: 'GitHub',
-                href: 'https://github.com/Jet-labs/Jet-admin',
+                label: "GitHub",
+                href: "https://github.com/Jet-labs/Jet-admin",
               },
             ],
           },
